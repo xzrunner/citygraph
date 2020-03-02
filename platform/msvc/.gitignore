@@ -1,0 +1,5 @@
+citygraph/
+projects/*
+
+!projects/citygraph.vcxproj
+!projects/citygraph.vcxproj.filters
