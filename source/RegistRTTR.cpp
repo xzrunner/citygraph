@@ -9,8 +9,8 @@ RTTR_REGISTRATION
 
 // base
 
-rttr::registration::class_<dag::Node<citygraph::OpVarType>::Port>("citygraph::Operator::Port")
-	.property("var", &dag::Node<citygraph::OpVarType>::Port::var)
+rttr::registration::class_<dag::Node<citygraph::ParamType>::Port>("citygraph::Operator::Port")
+	.property("var", &dag::Node<citygraph::ParamType>::Port::var)
 ;
 
 rttr::registration::class_<citygraph::Operator>("citygraph::Operator")

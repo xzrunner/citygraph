@@ -13,17 +13,24 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\include\citygraph\CityGraph.h" />
     <ClInclude Include="..\..\..\include\citygraph\Operator.h" />
+    <ClInclude Include="..\..\..\include\citygraph\OperatorHelper.h" />
+    <ClInclude Include="..\..\..\include\citygraph\operator\HeightField.h" />
+    <ClInclude Include="..\..\..\include\citygraph\operator\HeightField.parm.h" />
     <ClInclude Include="..\..\..\include\citygraph\operator\ShortestPath.h" />
     <ClInclude Include="..\..\..\include\citygraph\operator\ShortestPath.parm.h" />
-    <ClInclude Include="..\..\..\include\citygraph\OpVarType.h" />
     <ClInclude Include="..\..\..\include\citygraph\op_include_gen.h" />
     <ClInclude Include="..\..\..\include\citygraph\op_regist_cfg.h" />
     <ClInclude Include="..\..\..\include\citygraph\op_rttr_gen.h" />
+    <ClInclude Include="..\..\..\include\citygraph\Param.h" />
+    <ClInclude Include="..\..\..\include\citygraph\ParamImpl.h" />
+    <ClInclude Include="..\..\..\include\citygraph\ParamType.h" />
     <ClInclude Include="..\..\..\include\citygraph\typedef.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\CityGraph.cpp" />
     <ClCompile Include="..\..\..\source\Operator.cpp" />
+    <ClCompile Include="..\..\..\source\OperatorHelper.cpp" />
+    <ClCompile Include="..\..\..\source\operator\HeightField.cpp" />
     <ClCompile Include="..\..\..\source\operator\ShortestPath.cpp" />
     <ClCompile Include="..\..\..\source\RegistRTTR.cpp" />
   </ItemGroup>
@@ -70,7 +77,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\memmgr\include;..\..\..\..\guard\include;..\..\..\..\dag\include;..\..\..\..\external\boost\include;..\..\..\..\external\rttr\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\memmgr\include;..\..\..\..\guard\include;..\..\..\..\dag\include;..\..\..\..\heightfield\include;..\..\..\..\external\boost\include;..\..\..\..\external\rttr\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;NOISE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -85,7 +92,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\memmgr\include;..\..\..\..\guard\include;..\..\..\..\dag\include;..\..\..\..\external\boost\include;..\..\..\..\external\rttr\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\include;..\..\..\..\cu\src;..\..\..\..\sm\src\sm;..\..\..\..\memmgr\include;..\..\..\..\guard\include;..\..\..\..\dag\include;..\..\..\..\heightfield\include;..\..\..\..\external\boost\include;..\..\..\..\external\rttr\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;NOISE_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>

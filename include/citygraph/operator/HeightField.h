@@ -9,16 +9,13 @@ namespace citygraph
 namespace op
 {
 
-class ShortestPath : public Operator
+class HeightField : public Operator
 {
 public:
-    ShortestPath()
+    HeightField()
     {
-        m_imports = {
-            {{ ParamType::HeightField, "in" }},
-        };
         m_exports = {
-            {{ ParamType::Path, "out" }},
+            {{ ParamType::HeightField, "out" }},
         };
     }
 
@@ -26,11 +23,11 @@ public:
 
     RTTR_ENABLE(Operator)
 
-#define PARM_FILEPATH "citygraph/operator/ShortestPath.parm.h"
+#define PARM_FILEPATH "citygraph/operator/HeightField.parm.h"
 #include <dag/node_parms_gen.h>
 #undef PARM_FILEPATH
 
-}; // ShortestPath
+}; // HeightField
 
 }
 }

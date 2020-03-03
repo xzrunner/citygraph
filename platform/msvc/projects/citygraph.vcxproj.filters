@@ -16,14 +16,14 @@
     <Filter Include="tools\rtti">
       <UniqueIdentifier>{a7f457f9-aa59-4b31-9be8-df57c725a080}</UniqueIdentifier>
     </Filter>
+    <Filter Include="dataset\param">
+      <UniqueIdentifier>{f9f5c63a-1f64-48ee-b386-238c7ed63479}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\citygraph\CityGraph.h" />
     <ClInclude Include="..\..\..\include\citygraph\typedef.h" />
     <ClInclude Include="..\..\..\include\citygraph\Operator.h">
-      <Filter>dataset\operator</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\include\citygraph\OpVarType.h">
       <Filter>dataset\operator</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\include\citygraph\operator\ShortestPath.h">
@@ -41,6 +41,24 @@
     <ClInclude Include="..\..\..\include\citygraph\op_rttr_gen.h">
       <Filter>tools\rtti</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\citygraph\operator\HeightField.h">
+      <Filter>operators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\citygraph\operator\HeightField.parm.h">
+      <Filter>operators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\citygraph\Param.h">
+      <Filter>dataset\param</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\citygraph\ParamType.h">
+      <Filter>dataset\param</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\citygraph\ParamImpl.h">
+      <Filter>dataset\param</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\citygraph\OperatorHelper.h">
+      <Filter>tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\CityGraph.cpp" />
@@ -52,6 +70,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\source\RegistRTTR.cpp">
       <Filter>tools\rtti</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\operator\HeightField.cpp">
+      <Filter>operators</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\OperatorHelper.cpp">
+      <Filter>tools</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

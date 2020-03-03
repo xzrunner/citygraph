@@ -3,11 +3,11 @@
 namespace citygraph
 {
 
-enum class OpVarType
+enum class ParamType
 {
-    Any,
+    HeightField,
+    TensorField,
 
-    Heightmap,
     Path,
 };
 

@@ -1,22 +1,32 @@
 #pragma once
 
-#include "citygraph/OpVarType.h"
+#include "citygraph/typedef.h"
+#include "citygraph/ParamType.h"
 
 #include <dag/Node.h>
+
+namespace hf { class HeightField; }
 
 namespace citygraph
 {
 
-class Operator : public dag::Node<OpVarType>
+class Operator : public dag::Node<ParamType>
 {
 public:
     Operator() {}
 
     virtual void Execute() = 0;
 
-protected:
+    auto& GetAllValues() const { return m_vals; }
 
-    RTTR_ENABLE(dag::Node<OpVarType>)
+    auto GetHeightField() const { return m_hf; }
+
+protected:
+    std::vector<ParamPtr> m_vals;
+
+    std::shared_ptr<hf::HeightField> m_hf = nullptr;
+
+    RTTR_ENABLE(dag::Node<ParamType>)
 
 }; // Operator
 
