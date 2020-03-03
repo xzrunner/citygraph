@@ -15,8 +15,6 @@ class Operator : public dag::Node<ParamType>
 public:
     Operator() {}
 
-    virtual void Execute() = 0;
-
     auto& GetAllValues() const { return m_vals; }
 
     auto GetHeightField() const { return m_hf; }

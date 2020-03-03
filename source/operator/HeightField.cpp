@@ -8,7 +8,7 @@ namespace citygraph
 namespace op
 {
 
-void HeightField::Execute()
+void HeightField::Execute(const std::shared_ptr<dag::Context>& ctx)
 {
     if (m_filepath.empty()) {
         return;

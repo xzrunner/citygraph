@@ -7,7 +7,7 @@ namespace citygraph
 namespace op
 {
 
-void ShortestPath::Execute()
+void ShortestPath::Execute(const std::shared_ptr<dag::Context>& ctx)
 {
     m_hf = OperatorHelper::GetInputHeight(*this, 0);
     if (!m_hf) {
